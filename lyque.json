@@ -1,0 +1,64 @@
+{
+    "class": "dexterity",
+    "dexterity": 3,
+    "strength": 2,
+    "constitution": 1,
+    "intelligence": 1,
+    "wisdom": 2,
+    "charisma": 0,
+    "save": {
+        "dexterity": 7,
+        "strength": 6,
+        "constitution": 1,
+        "intelligence": 1,
+        "wisdom": 2,
+        "charisma": 0
+    },
+    "skill": {
+        "acrobatics": 3,
+        "animal-handling": 6,
+        "arcana": 1,
+        "athletics": 6,
+        "deception": 0,
+        "history": 1,
+        "insight": 2,
+        "intimidation": 0,
+        "investigation": 5,
+        "medicine": 4,
+        "nature": 5,
+        "perception": 2,
+        "performance": 0,
+        "persuasion": 0,
+        "religion": 1,
+        "sleight-of-hand": 3,
+        "stealth": 7,
+        "survival": 6
+    },
+    "equipment": {
+        "longbow": {
+            "hit": 10,
+            "dmg_dice": "1d8",
+            "dmg_mod": 8
+        },
+        "dagger": {
+            "hit": 8,
+            "dmg_dice": "1d4",
+            "dmg_mod": 4
+        },
+        "greatsword": {
+            "hit": 9,
+            "dmg_dice": "2d6",
+            "dmg_mod": 5
+        },
+        "handaxe": {
+            "hit": 6,
+            "dmg_dice": "1d6",
+            "dmg_mod": 2
+        },
+        "unarmed": {
+            "hit": 8,
+            "dmg_dice": "None",
+            "dmg_mod": 3
+        }
+    }
+}
