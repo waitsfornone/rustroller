@@ -29,7 +29,7 @@ fn dx(dice: String) -> Vec<u8> {
 }
 
 fn main() {
-    let raw_data = fs::read_to_string("./lyque.json").expect("Unable to read file");
+    let raw_data = fs::read_to_string("/home/tenders/Documents/code/rustroller/lyque.json").expect("Unable to read file");
     let res: serde_json::Value = serde_json::from_str(&raw_data).expect("Unable to parse");
     println!("{}", res);
     println!("{}", res["level"]);
