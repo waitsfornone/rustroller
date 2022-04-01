@@ -1,7 +1,7 @@
 use clap::Parser;
 use rand::Rng;
 use std::fs;
-use serde::{Serialize, Deserialize};
+use serde_json;
 
 #[derive(Parser, Debug)]
 #[clap(about, version, author)]
@@ -15,10 +15,6 @@ struct Args {
     // count: u8,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
-struct Character {
-    class: String,
-}
 
 fn dx(dice: String) -> Vec<u8> {
     let mut rolls: Vec<u8> = Vec::new();
@@ -33,8 +29,10 @@ fn dx(dice: String) -> Vec<u8> {
 }
 
 fn main() {
-    let raw_data = fs::read_to_string("/home/tenders/Documents/code/rustroller/lyque.json").expect("Unable to read file");
-    let data = serde_json::fromstr(raw_data).unwrap();
+    let raw_data = fs::read_to_string("./lyque.json").expect("Unable to read file");
+    let res: serde_json::Value = serde_json::from_str(&raw_data).expect("Unable to parse");
+    println!("{}", res);
+    println!("{}", res["level"]);
     let args = Args::parse();
 
     println!("Hello {}!", args.dice);
